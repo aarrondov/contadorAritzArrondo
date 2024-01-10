@@ -25,21 +25,23 @@ class MainActivity : AppCompatActivity() {
         btnPlus = findViewById(R.id.btnPlus)
         btnReset = findViewById(R.id.btnReset)
 
-        btnMinus.setOnClickListener { aumentar() }
-        btnPlus.setOnClickListener { disminuir() }
+        btnMinus.setOnClickListener { res() }
+        btnPlus.setOnClickListener { sum() }
         btnReset.setOnClickListener { resetear() }
     }
 
     // Método para decrementar el contador
-    private fun aumentar() {
-        count--
-        actualizarContador()
+    private fun res() {
+        if (count != 0){
+            count--
+            actualizarContador()
+        }
     }
 
     // Método para incrementar el contador
-    private fun disminuir() {
-        count++
-        actualizarContador()
+    private fun sum() {
+            count++
+            actualizarContador()
     }
 
     // Método para restablecer el contador a 0
